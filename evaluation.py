@@ -150,18 +150,18 @@ TYPE_ORDER_MAP = {
 # =============================================================================
 DATASET_CATEGORIES = {
     "Single-Label Classification": [
-        "te_sentiment_analysis",
-        "te_hate_speech_detection",
-        "te_offensive_language_detection",
-        "ste_tweethate",
+        "te-sentiment_analysis",
+        "te-hate_speech_detection",
+        "te-offensive_language_detection",
+        "ste-tweethate",
     ],
     "Multi-Label Classification": [
-        "ste_emotion",
-        "ste_tweettopic",
+        "ste-emotion",
+        "ste-tweettopic",
     ],
     "Targeted Classification": [
-        "ste_sentiment_analysis",
-        "te_stance_detection",
+        "ste-sentiment_analysis",
+        "te-stance_detection",
     ],
 }
 
