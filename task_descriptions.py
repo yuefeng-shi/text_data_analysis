@@ -22,7 +22,7 @@ The examples use the same prompt format that all five pipelines produce:
       block, so the same TSV-based format works — the LLM reads it as an
       illustrative example rather than as the live data.
 
-Targeted datasets (stw-sentiment_analysis, tw-stance_detection):
+Targeted datasets (ste-sentiment_analysis, te-stance_detection):
       Data lines follow {target}\\t{entry} format (tab-separated).
       The example reflects this layout.
 
@@ -32,14 +32,14 @@ than domain-specific assumptions.
 """
 
 TASK_DESCRIPTIONS = {
-    "tw-sentiment_analysis":          "This dataset has been collected for analysing its sentiment, classifying it into three categories: positive, negative, and neutral.",
-    "tw-hate_speech_detection":       "This dataset has been collected for detecting hate speech, classifying it into two categories: hate speech and non-hate speech.",
-    "tw-offensive_language_detection":"This dataset has been collected for analysing offensive language, classifying it into two categories: offensive language and non-offensive language.",
-    "stw-emotion":                    "This dataset has been collected for fine-grained emotion detection analysis, encompassing emotion types such as anger, anticipation, disgust, fear, joy, love, optimism, pessimism, sadness, surprise, trust, among others.",
-    "stw-tweettopic":                 "This dataset has been collected for topic classification analysis, encompassing topic categories such as arts and culture, business and entrepreneurs, celebrity and pop culture, diaries and daily life, family, fashion and style, film/TV and video, fitness and health, food and dining, gaming, learning and educational, music, news and social concern, other hobbies, relationships, science and technology, sports, travel and adventure, and youth and student life.",
-    "stw-tweethate":                  "This dataset has been collected for fine-grained hate speech detection analysis, encompassing hate speech types such as gender, race, sexuality, religion, origin, disability, age, and not hate.",
-    "tw-stance_detection":            "This dataset has been collected for stance detection, where each entry contains one target for detection and three categories: 'favor', 'against', and 'none'.",
-    "stw-sentiment_analysis":         "This dataset has been collected for aspect-based sentiment analysis on a three-point scale, where each entry contains one target for detection and three categories: 'negative', 'neutral', and 'positive'.",
+    "te-sentiment_analysis":          "This dataset has been collected for analysing its sentiment, classifying it into three categories: positive, negative, and neutral.",
+    "te-hate_speech_detection":       "This dataset has been collected for detecting hate speech, classifying it into two categories: hate speech and non-hate speech.",
+    "te-offensive_language_detection":"This dataset has been collected for analysing offensive language, classifying it into two categories: offensive language and non-offensive language.",
+    "ste-emotion":                    "This dataset has been collected for fine-grained emotion detection analysis, encompassing emotion types such as anger, anticipation, disgust, fear, joy, love, optimism, pessimism, sadness, surprise, trust, among others.",
+    "ste-tweettopic":                 "This dataset has been collected for topic classification analysis, encompassing topic categories such as arts and culture, business and entrepreneurs, celebrity and pop culture, diaries and daily life, family, fashion and style, film/TV and video, fitness and health, food and dining, gaming, learning and educational, music, news and social concern, other hobbies, relationships, science and technology, sports, travel and adventure, and youth and student life.",
+    "ste-tweethate":                  "This dataset has been collected for fine-grained hate speech detection analysis, encompassing hate speech types such as gender, race, sexuality, religion, origin, disability, age, and not hate.",
+    "te-stance_detection":            "This dataset has been collected for stance detection, where each entry contains one target for detection and three categories: 'favor', 'against', and 'none'.",
+    "ste-sentiment_analysis":         "This dataset has been collected for aspect-based sentiment analysis on a three-point scale, where each entry contains one target for detection and three categories: 'negative', 'neutral', and 'positive'.",
 }
 
 
@@ -56,7 +56,7 @@ TASK_DESCRIPTIONS = {
 
 ONE_SHOT_EXAMPLES = {
 
-    "tw-sentiment_analysis": """Example:
+    "te-sentiment_analysis": """Example:
 
 Dataset: Each line is a text entry, one record per line.
 
@@ -75,7 +75,7 @@ ANSWER:
 33.3%""",
 
 
-    "tw-hate_speech_detection": """Example:
+    "te-hate_speech_detection": """Example:
 
 Dataset: Each line is a text entry, one record per line.
 
@@ -94,7 +94,7 @@ ANSWER:
 1""",
 
 
-    "tw-offensive_language_detection": """Example:
+    "te-offensive_language_detection": """Example:
 
 Dataset: Each line is a text entry, one record per line.
 
@@ -113,7 +113,7 @@ ANSWER:
 yes""",
 
 
-    "stw-emotion": """Example:
+    "ste-emotion": """Example:
 
 Dataset: Each line is a text entry, one record per line.
 
@@ -132,7 +132,7 @@ ANSWER:
 no""",
 
 
-    "stw-tweettopic": """Example:
+    "ste-tweettopic": """Example:
 
 Dataset: Each line is a text entry, one record per line.
 
@@ -151,7 +151,7 @@ ANSWER:
 no""",
 
 
-    "stw-tweethate": """Example:
+    "ste-tweethate": """Example:
 
 Dataset: Each line is a text entry, one record per line.
 
@@ -170,7 +170,7 @@ ANSWER:
 1""",
 
 
-    "stw-sentiment_analysis": """Example:
+    "ste-sentiment_analysis": """Example:
 
 Dataset: Each line follows the format: {target}\t{entry} (tab-separated, one record per line). The first column is the target word; the second is the text entry.
 
@@ -189,7 +189,7 @@ ANSWER:
 no""",
 
 
-    "tw-stance_detection": """Example:
+    "te-stance_detection": """Example:
 
 Dataset: Each line follows the format: {target}\t{entry} (tab-separated, one record per line). The first column is the target word; the second is the text entry.
 
